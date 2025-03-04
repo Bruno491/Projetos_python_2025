@@ -37,7 +37,7 @@ def criar_mensagem(from_address, to_address, subject, body, attachment_path):
         print(f"Arquivo {attachment_path} não encontrado.")
     return msg
 
-def enviar_email():
+def Enviar_email():
     email, password = obter_credenciais()
     if not email or not password:
         print("Credenciais não encontradas.")
@@ -65,4 +65,4 @@ def enviar_email():
         print(f"Falha ao enviar email: {e}")
 
 if __name__ == "__main__":
-    enviar_email()
+    Enviar_email()
