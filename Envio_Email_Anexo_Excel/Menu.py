@@ -50,12 +50,16 @@ def exibir_menu():
             elif op == 3:
                 manual()
             elif op == 4:
-                edita_planilha()
-                break
+                caminho_arquivo = input("Informe o caminho do arquivo Excel: ")
+                nome_planilha = input("Informe o nome da planilha: ")
+                celula = input("Informe a célula que deseja editar (por exemplo, A1): ")
+                novo_valor = input("Informe o novo valor para a célula: ")
+                edita_planilha(caminho_arquivo, nome_planilha, celula, novo_valor)
             elif op == 5:
                 print('Saindo...')
                 time.sleep(2.1)
                 os.system('cls')
+                break
             else:
                 print('Opção inválida, tente novamente.')
         except ValueError:
