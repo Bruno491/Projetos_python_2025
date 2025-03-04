@@ -5,6 +5,7 @@ from procurar_planilha import procurar_planilha
 from Enviar_email import Enviar_email
 from Manual import manual
 from alerta import alerta
+from edita_planilha import edita_planilha
 
 VALIDAR_IP = '000.000.000.0'
 HOST = 'google.com'
@@ -37,7 +38,8 @@ def exibir_menu():
         print('1- Procurar pela planilha no dispositivo')
         print('2- Enviar relatório por e-mail')
         print('3- Manual')
-        print('4- Sair')
+        print('4- Editar planilha')
+        print('5- Sair')
         try:
             op = int(input('Opção: '))
             os.system('cls')
@@ -48,10 +50,12 @@ def exibir_menu():
             elif op == 3:
                 manual()
             elif op == 4:
+                edita_planilha()
+                break
+            elif op == 5:
                 print('Saindo...')
                 time.sleep(2.1)
                 os.system('cls')
-                break
             else:
                 print('Opção inválida, tente novamente.')
         except ValueError:

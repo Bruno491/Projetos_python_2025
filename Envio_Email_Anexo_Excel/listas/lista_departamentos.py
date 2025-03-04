@@ -1,7 +1,7 @@
 import os
-from listas.lista2 import lista2
-from listas.lista3 import lista3
-from listas.lista1 import lista1
+from listas import lista2
+from listas import lista3
+from listas import lista1
 
 def exibir_menu_departamentos():
     print('<<<<Departamentos>>>>')
